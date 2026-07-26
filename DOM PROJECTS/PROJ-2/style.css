@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
+h1{
+    font-size: 8vw;
+    font-weight: 900;
+    color: white;
+}
+
+.cursor{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;   
+     /* left and top property can work in eventlistener */
+    mix-blend-mode: difference;
+    transition: all linear 0.1s;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
