@@ -1,4 +1,4 @@
-Here is the next section formatted as a `README.md` chapter that continues from the asynchronous programming notes.
+
 
 # JavaScript Promises
 
@@ -263,7 +263,7 @@ The underlying mechanism is still Promise-based.
 
 ---
 
-# Interview Summary (45–60 Seconds)
+#  Summary (45–60 Seconds)
 
 > Promises were introduced in JavaScript to solve the problems of callback-based asynchronous programming. A Promise represents the future result of an asynchronous operation. It has three states: pending, fulfilled, and rejected. We create a Promise using the Promise constructor with resolve and reject functions. When the operation succeeds, we call resolve, and when it fails, we call reject. We handle successful results using `.then()` and errors using `.catch()`. The biggest advantage of Promises is that they allow chaining of multiple asynchronous operations in a cleaner way and help avoid callback hell. Modern JavaScript further improves Promise handling with async and await syntax.
 
