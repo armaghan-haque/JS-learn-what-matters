@@ -66,4 +66,114 @@ Store a function in an object or array.
 person.greet();
 
 new keyword
-The new keyword is used to create a new object from a constructor function or class. It creates an empty object, sets this to that object, initializes it with the given values, and returns the new object.
+The new keyword is used to create a new object from a constructor function .
+It creates a blank object, sets this to that object, initializes it with the given values, and returns the new object.
+
+ex
+
+function abcd(){
+    this.age = 24;
+}
+
+new abcd()
+
+{
+    age : 24;  // creates a blank objects and initializes it with the given values
+}
+
+An IIFE (Immediately Invoked Function Expression) is a function that is defined and executed immediately after it is created.
+
+syntax
+(function () {
+    console.log("IIFE executed!");
+})();
+
+Why Use an IIFE?
+To execute code only once.
+To create a private scope so variables inside the function don't affect the rest of the program.
+
+(function () {
+    let message = "Hello";
+    console.log(message);
+})();
+
+// console.log(message); // Error: message is not defined
+
+here, message exists only inside the IIFE.
+
+let ans = (function(){
+    let privateval = 12;
+    
+    return {
+        getter : function(){
+            console.log(privateval);
+        },
+
+        setter : function(val) {
+            privateval = val; 
+        }
+
+    }
+})()
+
+A prototype is an object that lets multiple objects share the same methods and properties.
+
+[[prototype]] contains many helper properties and methods which we can use to complete our task, we use .length property on array, did we created length on that array, no! but it still contains length, the question is how ?
+
+the answer is, many properties and methods are already available to use built by javascript creators inside prototype of every object.
+
+prortype inheritance 
+Prototype inheritance is the mechanism by which one object can access the properties and methods of another object through its prototype.
+
+let human = {
+    canFly : false,
+    canTalk : true,
+    canwalk : true,
+    haveEmotions : true
+}
+
+let codingstudents={
+    canMakeaAmazingWebsites : true,
+    canSolveDsa : true
+}
+
+codingstudents.__proto__ = human;
+
+Variables or declarations written outside any block {}, function are in the global scope 
+let a = 10; // Global scope
+
+{
+  let b = 20; // Block scope
+}
+
+this keyword 
+
+this keyword is a special keyword in js which changes it's value in different context
+
+in global scope
+console.log(this);   // gives window
+
+in function scope
+function abcd(){
+    console.log(this);    // gives window
+}
+
+abcd()
+
+in method scope
+let obj = {
+    name : "arman",
+    somemethod : function(){    // gives method.
+        console.log(this);
+    }
+}
+
+obj.somemethod()
+
+ // In any method this refers always to   the parent object
+
+
+ call apply bind
+ To change the function's this value to the object of our choice we can use call ,apply bind
+
+ call:

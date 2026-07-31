@@ -1,9 +1,9 @@
-function circularButton (color){
-    this.radius  = 2;
-    this.color = color;
-    this.icon = false;
-    this.pressable = true;
+function abcd(){
+    console.log(this);
 }
 
-let redbtn = new circularButton("red");
-let greenbtn = new circularButton("green");
+let obj = {
+    age : 24
+}
+
+abcd.call(obj);
