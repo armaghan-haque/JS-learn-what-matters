@@ -6,4 +6,5 @@ let obj = {
     age : 24
 }
 
-abcd.call(obj);
+abcd.call(obj); 
+// normally this 

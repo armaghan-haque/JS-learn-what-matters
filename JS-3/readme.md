@@ -176,4 +176,4 @@ obj.somemethod()
  call apply bind
  To change the function's this value to the object of our choice we can use call ,apply bind
 
- call:
+  call:
