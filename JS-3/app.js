@@ -7,4 +7,4 @@ let obj = {
 }
 
 abcd.call(obj); 
-// normally this 
+// normally this will directs to the window object
